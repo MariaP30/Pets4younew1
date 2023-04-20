@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Report a Pet</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.php">Home</a></li>
+          <li><a href="../PHP/Adoption.php">Adoption</a></li>
+          <li><a href="../PHP/Donation.php">Donation</a></li>
+          <li><a href="Report.html">Report</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Report a Missing or Found Pet</h1>
+      <p>Please provide the following information about the missing or found pet:</p>
+      <form>
+        <label for="petName">Pet Name:</label>
+        <input type="text" id="petName" name="petName" required>
+
+        <label for="petType">Pet Type:</label>
+        <select id="petType" name="petType" required>
+          <option value="">--Select--</option>
+          <option value="Dog">Dog</option>
+          <option value="Cat">Cat</option>
+          <option value="Bird">Bird</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <label for="petBreed">Pet Breed:</label>
+        <input type="text" id="petBreed" name="petBreed">
+
+        <label for="petColor">Pet Color:</label>
+        <input type="text" id="petColor" name="petColor">
+
+        <label for="petGender">Pet Gender:</label>
+        <input type="radio" id="petGenderMale" name="petGender" value="Male">
+        <label for="petGenderMale">Male</label>
+        <input type="radio" id="petGenderFemale" name="petGender" value="Female">
+        <label for="petGenderFemale">Female</label>
+
+        <label for="petAge">Pet Age:</label>
+        <input type="number" id="petAge" name="petAge">
+
+        <label for="petDescription">Pet Description:</label>
+        <textarea id="petDescription" name="petDescription"></textarea>
+
+        <label for="ownerName">Owner Name:</label>
+        <input type="text" id="ownerName" name="ownerName" required>
+
+        <label for="ownerContact">Owner Contact:</label>
+        <input type="tel" id="ownerContact" name="ownerContact" required>
+
+        <label for="petImage">Pet Image:</label>
+        <input type="file" id="petImage" name="petImage" accept="image/*" required>
+
+        <button id="submit-report-btn">Submit Report</button>
+      </form>
+    </main>
+
+    <footer>
+      <h2 style="text-align:center;">Contact us:</h2>
+      <ul style="text-align:center; list-style-type: none; padding: 0;">
+          <li><a href="Tel:07423411445">Phone:07423411445</a></li>
+          <li><a href="Email:info@pets4you.com">Email:info@pets4you.com</a></li>
+          <li><a href="83 High Street, Luton, Uk">Address:83 High Steet, Luton, UK</a></li>
+      </ul>
+    </footer>
+
+    <script>
+        const submitBtn = document.getElementById("submit-report-btn");
+        submitBtn.addEventListener("click", function() {
+          alert("Your report has been submitted!");
+        });
+      </script>
+  </body>
+</html>
